@@ -1,79 +1,308 @@
-a {}
-
+/* Global Styles */
 body {
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  /* font-family: sans-serif, Arial; */
+  /* font-family: 'Montserrat', sans-serif; */
+  /* font-family: 'Nunito Sans', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top Menu Styles */
+.top-menu {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.title-menu {
+  display: flex;
+  align-items: center;
+}
+
+.title-menu a {
+  text-decoration: none;
+  color: #888;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.title-menu a:hover,
+.title-menu a.current {
+  color: #2270E2;
+}
+
+/* "Hire Me" Button Styles */
+.hire-button {
+  background-color: #2270E2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  /* border-radius: 5px; */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hire-button:hover {
+  background-color: #0058a3;
+}
+
+/* Container Styles */
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.container:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+/* Nested Container Styles */
+.nested-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Take equal space within the wrapper */
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+/* Left Nested Container Styles */
+.left-container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+}
+
+.left-container .header {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.learn-more-button {
+  background-color: #2270E2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-start; /* Align button to the left */
+}
+
+.learn-more-button:hover {
+  background-color: #0058a3;
+}
+
+/* Image Container Styles */
+.image-container {
   text-align: center;
 }
-/* 
-div {
-    background-color: #DDE6ED;
-  } */
 
-H1 {
-  margin-block-start: 0px;
+.fill-image {
+  max-width: 100%;
+  height: auto;
 }
 
-.cloud_bottom {
-  position: absolute;
-  top: 30%;
-  left: 20%;
+/* Wrapper for nested containers */
+.nested-containers-wrapper {
+  display: flex;
 }
 
-.cloud_top {
+/* About Me Container Styles */
+.about-me-container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.about-me-header {
+  font-size: 40px;
+  /* color: #2270E2; */
   position: relative;
-  top: 50px;
-  left: 200px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-.squares {
-  height: 100px;
-  width: 100px;
+.about-me-header::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background-color: #49A078;
 }
 
-.profile_header{
-  size: 10%;
-  margin: 0 auto 0 auto;
-}
-
-.top_container {
-  background-color: #DDE6ED;
+.short-p{
+  font-size: 30px;
+  /* color: #2270E2; */
   position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+  line-height: 1;
 }
 
-#b {
-  background-color: blue;
+.short-p::after {
+  content: '';
   position: absolute;
-  left: 100px;
-  top: 606px;
+  bottom: -5px;
+  left: 0%;
+  width: 25%;
+  height: 2px;
+  background-color: #49A078;
 }
-#r {
-  background-color: red;
+
+/* Contact Me Button Styles */
+.contact-button {
+  background-color: #2270E2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Nested Container Styles */
+.nested-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align headers at the same level */
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  box-sizing: border-box;
+}
+
+/* Service Content Styles */
+.service-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%; /* Fixed height */
+}
+
+/* Service Image Styles */
+.service-image {
+  width: 100%;
+  /* max-height: 200px; Set a maximum height if needed */
+  object-fit: contain; /* Keep the image centered and contained within the container */
+}
+
+/* Service Details Styles */
+.text-content {
+  text-align: left;
+}
+
+/* Service Title Styles */
+.service-title {
+  font-size: 25px;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+/* Service Description Styles */
+.service-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Learn More Link Styles */
+.learn-more-link {
+  color: #2270E2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.learn-more-link:hover {
+  color: #0058a3;
+}
+
+/* Work Experience Container Styles */
+.work-experience-container {
+  text-align: center;
+  margin-top: 20px; /* Add space between this and the previous container */
+}
+
+/* Health Bar Styles */
+.health-bar {
+  width: 100%;
+  height: 7px;
+  background-color: #ddd;
+  margin-top: 10px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.health-bar .fill {
+  height: 100%;
   position: absolute;
-  left: 200px;
-  top: 706px;
+  top: 0;
+  left: 0;
+  background-color: #49A078;
 }
 
-#y {
-  background-color: yellow;
+/* Portfolio Container Styles */
+.portfolio-container {
+  margin-top: 20px; /* Add space between this and the previous container */
+  text-align: center; /* Center-align text in the container */
 }
 
-/* ---------- id selectors -------------- */
-
-/* #profile_image {
-  border-radius: 100%;
-  height: 150px;
-  width: 150px;
-} */
-
-
-/* ----------------------------------------- pseudo classes: this is for state of an element ------------------------------------- */
-
-/* img:hover {
-  color: goldenrod;
+/* Header Alignment for Portfolio Container */
+.portfolio-container .about-me-header {
+  text-align: center; /* Center-align the header */
 }
 
-a:hover {
-  color: gold;
-} */
+/* Simplified Image Carousel Styles */
+.image-carousel {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  align-items: center; /* Center-align vertically */
+}
+
+.carousel-images {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease-in-out;
+  justify-content: space-between; /* Distribute images evenly */
+  width: 150%; /* Set a wider width to accommodate all images */
+  transform: translateX(0); /* Initial position */
+}
+
+.carousel-image {
+  width: calc(33.33% - 10px); /* Adjust for equal spacing */
+  text-align: center;
+  margin: 0 5px; /* Add spacing between images */
+}
+
+.carousel-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-button:hover {
+  background-color: #0058a3;
+}
+
